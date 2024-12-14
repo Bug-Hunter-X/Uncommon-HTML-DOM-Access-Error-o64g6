@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    //This is an example of an uncommon error where you try to access a non-existent element before it's added to the DOM.
+    document.getElementById("myDiv").innerHTML = "Hello, world!"; //Error: Uncaught TypeError: Cannot set property 'innerHTML' of null
+
+    //Correct way to access element
+    setTimeout(function(){
+        document.getElementById("myDiv").innerHTML = "This is correct";
+    }, 0);
+  </script>
+</body>
+</html>
